@@ -315,7 +315,7 @@ int main(const int argc, const char** argv)
 	{
 		char buf[64];
 		format_size(buf, sizeof(buf), total);
-		printf("Allocated %s total\n", buf);
+		printf("Total: %s leaked\n", buf);
 		printf("Finished.\n");
 	}
 
