@@ -4,7 +4,8 @@ CC		:= gcc
 CFLAGS	:= -Wall -Wextra -Werror -Ofast
 
 SRCDIR	:= src
-OBJDIR	:= obj/posix
+OBJBASE	:= obj/
+OBJDIR	:= $(OBJBASE)/posix
 
 SRC		:= $(SRCDIR)/leaker.c
 OBJ		:= $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
@@ -22,6 +23,7 @@ $(OBJDIR):
 
 clean:
 	rm -rf $(OBJDIR)
+	rm -rf $(OBJBASE)
 
 fclean: clean
 	rm -f $(NAME)
