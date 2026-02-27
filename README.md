@@ -2,6 +2,9 @@
 
 A simple program whose whole purpose is to leak memory.
 
+> [!CAUTION]
+> This software is provided as is, without warranty of any kind. I am not responsible for any damages, data loss, or other issues that may arise from the use of this software. Use at your own risk.
+
 ## Why?
 
 I was bored and here we are
@@ -14,7 +17,7 @@ I was bored and here we are
 
 The `--size` argument is required, all others are optional
 
-> [!CAUTION]  
+> [!IMPORTANT]  
 > By default RAM usage wont rise unless you force commit the memory
 > This enables the program to write to the memory (forcefully committing it)
 > Once the program terminates, the memory is returned to the kernel, reverting the leak
@@ -73,7 +76,7 @@ build_msvc.bat
 
 Cleaning and similar must be done manually
 
-> [!TIP]
+> [!NOTE]
 > You may also compile using [MinGW](https://www.mingw-w64.org/)
 
 ## License
