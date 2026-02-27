@@ -9,8 +9,8 @@
 #ifdef _WIN32
 #include <windows.h>
 #define strcasecmp _stricmp
+#define SSIZE_MAX  LLONG_MAX
 typedef long long ssize_t;
-#define SSIZE_MAX LLONG_MAX
 static void platform_sleep(double seconds)
 {
 	Sleep((DWORD)(seconds * 1000));
@@ -236,7 +236,7 @@ static int leak(
 	return 1;
 }
 
-static size_t leak_loop(const args_t* args)
+static size_t iterative_leak(const args_t* args)
 {
 	size_t total = 0;
 
@@ -309,7 +309,7 @@ int main(const int argc, const char** argv)
 	if (args->should_print)
 		printf("Warning: Leaking only persists within the program's lifetime!\n");
 
-	const size_t total = leak_loop(args);
+	const size_t total = iterative_leak(args);
 
 	if (args->should_print)
 	{
