@@ -1,0 +1,12 @@
+*.o
+*.a
+*.so
+*.out
+*.obj
+*.exe
+*.dll
+
+obj/
+
+leaker
+leaker.exe
