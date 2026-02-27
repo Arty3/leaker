@@ -11,6 +11,18 @@ I was bored and here we are
 
 ## Usage
 
+First, either [build](#build) the program from source, or grab a pre-compiled release [here](https://github.com/Arty3/leaker/releases/tag/v1.0)
+
+Then, run the program as follows:
+
+- Windows
+
+```bat
+leaker.exe --size=...
+```
+
+- Posix
+
 ```sh
 ./leaker --size=...
 ```
